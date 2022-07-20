@@ -7,3 +7,7 @@ p{
 body{
     background-image: "music.jpg"
 }
+
+canvas{
+    margin-bottom: 20px;
+}
