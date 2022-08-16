@@ -8,6 +8,7 @@ var leftWristx=0;
 var leftWristy=0;
 var statu1=""
 var statu2=""
+var right_score=0;
 function preload(){
     music = loadSound("music.mp3") 
     music1 = loadSound("music2.mp3") 
@@ -25,7 +26,7 @@ function draw(){
     canvas= createCanvas(400,400);
     canvas.position(550,250)
     statu1=music.isPlaying()
-    
+    statu2=music1.isPlaying
     image(webcam,0,0,400,400);
    
     if(left_score>0.2){
@@ -33,13 +34,24 @@ function draw(){
         circle(leftWristx,leftWristy,30);
         fill("#00FFFF");
         stroke("#FF5F1F");
-        music1.stop
+       
         
          if(statu1==false){
             music.play()
             document.getElementById("heading").innerHTML="The song which is playing currently is harry Pottter"
          }
     }
+    if(right_score>0.2){
+        music.stop();
+        circle(rightWristx,rightWristy,30)
+        fill("#00FFFF");
+        stroke("#FF5F1F");
+if(stau==false){
+    music1.play()
+    document.getElementById("heading").innerHTML="The song which is playing currently is Peter Pan"
+}
+}
+
 }
 function modelLoaded(){
     console.log("posent is initialized");
